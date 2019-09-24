@@ -1,0 +1,25 @@
+{
+  "stickmanSize": "normal",
+  "stickmanPos": {
+    "x": 20.0
+  },
+  "cloudVelocity": 3.2,
+  "levelNumber": 1,
+  "platformNumber": 2,
+  "platform1": {
+    "x": 300.0,
+    "y": 225.0
+  },
+  "platform2": {
+  "x": 500.0,
+  "y": 250.0
+  },
+  "enemyNumber": 2,
+  "enemy1": {
+    "x": 300.0
+  },
+  "enemy2": {
+    "x": 700.0
+  },
+  "finishLine": 1280.0
+}
