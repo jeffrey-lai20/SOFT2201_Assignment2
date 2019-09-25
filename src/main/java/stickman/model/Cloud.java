@@ -7,6 +7,13 @@ public class Cloud extends AbstractEntity {
         this.entityName = entityName;
         this.xPos = xPos;
         this.yPos = yPos;
+        if (entityName.equals("Cloud1")) {
+            this.height = 10;
+            this.width = 40;
+        } else if (entityName.equals("Cloud2")) {
+            this.height = 22;
+            this.width = 80;
+        }
     }
 
     @Override
@@ -17,6 +24,10 @@ public class Cloud extends AbstractEntity {
             return "cloud_2.png";
         }
         return null;
+    }
+
+    public void move(double cloudVelocity) {
+        xPos += cloudVelocity/60;
     }
 
 }

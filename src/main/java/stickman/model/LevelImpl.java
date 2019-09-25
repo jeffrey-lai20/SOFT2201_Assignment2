@@ -13,7 +13,6 @@ public class LevelImpl implements Level {
     private double width;
     private double floorHeight;
     private double heroX;
-    private double heroXV;
     private double cloudVelocity;
     private List<Entity> entities;
     private double cloud1x;
@@ -32,10 +31,11 @@ public class LevelImpl implements Level {
     private int jumpTick = 0;
 
     private Hero hero;
-    private Cloud cloud;
+    private Cloud cloud1;
     private Cloud cloud2;
     private AbstractEntity platform1;
     private AbstractEntity platform2;
+    private AbstractEntity finishLineFlag;
     /**
      * Constructor to set initial dimensions and positions
      * of the level and its entities.
@@ -61,7 +61,6 @@ public class LevelImpl implements Level {
         this.width = 640;
         this.floorHeight = 300;
         this.heroX = heroX;
-        this.heroXV = heroX;
         this.cloudVelocity = cloudVelocity;
         this.entities = new ArrayList<Entity> ();
         this.cloud1x = 150;
@@ -74,10 +73,12 @@ public class LevelImpl implements Level {
         this.finishLine = finishLine;
         this.finish = false;
         hero = new Hero("Hero", heroX, floorHeight-size, size);
-        cloud = new Cloud("Cloud1", cloud1x, height - 200, size);
+        cloud1 = new Cloud("Cloud1", cloud1x, height - 200, size);
         cloud2 = new Cloud("Cloud2", cloud2x, height - 230, size);
         platform1 = new AbstractEntity("Platform1",platform[0], platform[1], size);
         platform2 = new AbstractEntity("Platform2",platform[2], platform[3], size);
+        finishLineFlag = new AbstractEntity("FinishLineFlag",finishLine, floorHeight-70, size);
+
     }
 
     @Override
@@ -98,34 +99,46 @@ public class LevelImpl implements Level {
     @Override
     public void tick() {
         entities = new ArrayList<Entity> ();
+        //Create a for loop to add numerous clouds and platforms and enemies later
         entities.add(0,hero);
+        entities.add(1, cloud1);
+        entities.add(2, cloud2);
+        entities.add(3, platform1);
+        entities.add(4, platform2);
+        entities.add(5, finishLineFlag);
 
-        if (left && hero.getXPos() > 0) {
+        cloudMove();
+        if (getHeroX() == finishLine) finish = true;
+
+        if (left && hero.getXPos() > 0 && !finish) {
             hero.moveLeft();
-        } else if (right) {
+        }
+        if (right && !finish) {
             hero.moveRight();
         }
 
         if (jump) {
-            if (jumpTick < 30) {
-                hero.jump();
-                jumpTick++;
-            }
-        }
-
-        if (jumpTick >= 30 && jumpTick < 60) {
-            hero.desc();
+            hero.jump(jumpTick);
             jumpTick++;
-        } else if (jumpTick == 60) {
+        }
+        if (jumpTick == 60) {
             jump = false;
             jumpTick = 0;
         }
 
-        entities.add(0, hero);
-        entities.add(1, cloud);
-        entities.add(2, cloud2);
-        entities.add(3, platform1);
-        entities.add(4, platform2);
+//        for (Entity entity: entities) {
+        for (int i = 1; i < entities.size()-1; i++) {
+            if (checkCollision(entities.get(i), hero)) {
+                stopMoving();
+                System.out.println(entities.get(3).getXPos());
+                System.out.println(entities.get(0).getXPos());
+                System.out.println(entities.get(0).getWidth());
+
+            }
+        }
+
+
+//        }
     }
 
     @Override
@@ -140,7 +153,7 @@ public class LevelImpl implements Level {
 
     @Override
     public boolean jump() {
-        if (jumpTick != 0) {
+        if (jumpTick != 0 || finish) {
             return false;
         }
         jump = true;
@@ -149,12 +162,20 @@ public class LevelImpl implements Level {
 
     @Override
     public boolean moveLeft() {
+        if (finish) {
+            left = false;
+            return false;
+        }
             left = true;
         return true;
     }
 
     @Override
     public boolean moveRight() {
+        if (finish) {
+            left = false;
+            return false;
+        }
             right = true;
         return true;
     }
@@ -167,25 +188,19 @@ public class LevelImpl implements Level {
     }
 
     public boolean finish() {
-        if (finish)
-        System.out.println("Finished!");
         return finish;
     }
 
-    private void cloud() {
-        if (cloud1x > width) cloud1x = -80;
-        if (cloud2x > width) cloud2x = -80;
-        if (cloud1x < -80) cloud1x = width;
-        if (cloud2x < -80) cloud2x = width;
-        cloud1x += cloudVelocity/60;
-        cloud2x += cloudVelocity/60;
-        if (left && heroXV >= 280 && heroX == 279) {
-            cloud1x += 1;
-            cloud2x += 1;
-        } else if (right && heroXV >= 360 && heroX == 360) {
-            cloud1x -= 1;
-            cloud2x -= 1;
-        }
+    private void cloudMove() {
+        cloud1.move(cloudVelocity);
+        cloud2.move(cloudVelocity);
+    }
+
+    private boolean checkCollision (Entity a, Entity b) {
+        return (a.getXPos() < (b.getXPos() + b.getWidth()) &&
+                ((a.getXPos()+a.getWidth()) > b.getXPos())  &&
+                (a.getYPos() < (b.getYPos() + b.getHeight())) &&
+                ((a.getYPos() + a.getHeight()) > b.getYPos()));
     }
 
 }

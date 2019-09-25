@@ -13,14 +13,24 @@ public class AbstractEntity implements Entity {
         this.entityName = entityName;
         this.xPos = xPos;
         this.yPos = yPos;
+        if (this.entityName.equals("Platform1")) {
+            this.width = 16;
+            this.height = 16;
+        } else if (this.entityName.equals("Platform2")) {
+            this.width = 16;
+            this.height = 16;
+        }
+
     }
 
     @Override
     public String getImagePath() {
         if (entityName.equals("Platform1")) {
-            return "tree.png";
+            return "foot_tile.png";
         } else if (entityName.equals("Platform2")) {
             return "foot_tile.png";
+        } else if (entityName.equals("FinishLineFlag")) {
+            return "flag.png";
         }
         return null;
     }
@@ -48,14 +58,9 @@ public class AbstractEntity implements Entity {
     @Override
     public Layer getLayer() {
         this.layer = Layer.FOREGROUND;
+        if (entityName.equals("FinishLineFlag")) {
+            this.layer = Layer.BACKGROUND;
+        }
         return this.layer;
-    }
-
-    public void setxPos(double newX) {
-        this.xPos = newX;
-    }
-
-    public void setyPos(double newY) {
-        this.yPos = newY;
     }
 }

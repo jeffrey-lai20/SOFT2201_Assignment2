@@ -4,6 +4,7 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
+import javafx.scene.text.Font;
 import javafx.util.Duration;
 import stickman.model.Entity;
 import stickman.model.GameEngine;
@@ -11,6 +12,7 @@ import stickman.model.GameEngineImpl;
 import javafx.scene.text.Text;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -24,9 +26,12 @@ public class GameWindow {
     private GameEngineImpl model;
     private List<EntityView> entityViews;
     private BackgroundDrawer backgroundDrawer;
+    private double elapsedTime = 0;
 
     private double xViewportOffset = 0.0;
     private static final double VIEWPORT_MARGIN = 280.0;
+
+    Text time;
 
     /**
      * Constructor for GameWindow. Sets the initial values of its
@@ -51,6 +56,9 @@ public class GameWindow {
 //        this.backgroundDrawer = new BlockedBackground();
         this.backgroundDrawer = new ParallaxBackground();
         backgroundDrawer.draw(model, pane);
+        time = new Text();
+        pane.getChildren().add(time);
+
     }
 
     /** Returns the scene. */
@@ -71,11 +79,6 @@ public class GameWindow {
     private void draw() {
         model.tick();
 
-        if (model.finish()) {
-            Text finished = new Text("FINISHED!");
-            finished.setX(model.getCurrentLevel().getWidth()/2);
-            finished.setY(model.getCurrentLevel().getHeight()/2);
-        }
         List<Entity> entities = model.getCurrentLevel().getEntities();
 
         for (EntityView entityView: entityViews) {
@@ -123,5 +126,25 @@ public class GameWindow {
             }
         }
         entityViews.removeIf(EntityView::isMarkedForDelete);
+
+        if (model.finish()) {
+            Text finished = new Text("F I N I S H E D !");
+            finished.setFont(new Font(50));
+            finished.setX(model.getCurrentLevel().getWidth()/2-150);
+            finished.setY(model.getCurrentLevel().getHeight()/2);
+            pane.getChildren().add(finished);
+        } else {
+            elapsedTime = (new Date()).getTime() - model.getStartTime();
+            elapsedTime = elapsedTime/1000;
+            time.setText("Time: " + elapsedTime);
+            time.setFont(new Font(20));
+            time.setX(30);
+            time.setY(30);
+        }
+
+
+
+
+
     }
 }

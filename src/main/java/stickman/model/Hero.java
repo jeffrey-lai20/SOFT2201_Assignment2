@@ -1,11 +1,6 @@
 package stickman.model;
 
 public class Hero extends AbstractEntity implements HeroControl {
-//    private String entityName;
-//    private double xPos;
-//    private double yPos;
-//    private double height;
-//    private double width;
 
     public Hero(String entityName, double xPos, double yPos, double size) {
         super(entityName, xPos, yPos, size);
@@ -13,8 +8,8 @@ public class Hero extends AbstractEntity implements HeroControl {
         this.xPos = xPos;
         this.yPos = yPos;
         if (entityName.equals("Hero")) {
-            this.height = size;
-            this.width = size;
+            this.height = 34;
+            this.width = 20;
         }
     }
 
@@ -37,12 +32,11 @@ public class Hero extends AbstractEntity implements HeroControl {
     }
 
     @Override
-    public void jump() {
-        this.yPos--;
-    }
-
-    @Override
-    public void desc() {
-        this.yPos++;
+    public void jump(int jumpTick) {
+        if (jumpTick < 30) {
+            this.yPos -= 2;
+        } else if (jumpTick < 60) {
+            this.yPos += 2;
+        }
     }
 }
