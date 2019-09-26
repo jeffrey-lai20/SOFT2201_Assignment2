@@ -32,11 +32,11 @@ public class Hero extends AbstractEntity implements HeroControl {
     }
 
     @Override
-    public void jump(int jumpTick) {
-        if (jumpTick < 30) {
-            this.yPos -= 2;
-        } else if (jumpTick < 60) {
-            this.yPos += 2;
+    public void jump(int jumpY) {
+        if (jumpY < 30) {
+            this.yPos -= 3;
+        } else if (jumpY <= 60) {
+            this.yPos += 3;
         }
     }
 }

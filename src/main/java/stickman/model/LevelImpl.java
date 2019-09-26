@@ -28,7 +28,8 @@ public class LevelImpl implements Level {
     private double[] enemy;
     private double finishLine;
     private boolean finish;
-    private int jumpTick = 0;
+    private int jumpY = 0;
+    private boolean col;
 
     private Hero hero;
     private Cloud cloud1;
@@ -109,6 +110,16 @@ public class LevelImpl implements Level {
 
         cloudMove();
         if (getHeroX() == finishLine) finish = true;
+        for (int i = 1; i < entities.size()-1; i++) {
+            if (checkCollision(hero, entities.get(i))) {
+                handleCollision(entities.get(i));
+                jumpY = 0;
+                col = true;
+            } else {
+                col = false;
+            }
+        }
+
 
         if (left && hero.getXPos() > 0 && !finish) {
             hero.moveLeft();
@@ -116,29 +127,18 @@ public class LevelImpl implements Level {
         if (right && !finish) {
             hero.moveRight();
         }
-
         if (jump) {
-            hero.jump(jumpTick);
-            jumpTick++;
-        }
-        if (jumpTick == 60) {
-            jump = false;
-            jumpTick = 0;
-        }
-
-//        for (Entity entity: entities) {
-        for (int i = 1; i < entities.size()-1; i++) {
-            if (checkCollision(entities.get(i), hero)) {
-                stopMoving();
-                System.out.println(entities.get(3).getXPos());
-                System.out.println(entities.get(0).getXPos());
-                System.out.println(entities.get(0).getWidth());
-
+            hero.jump(jumpY);
+            jumpY++;
+            if (jumpY == 60) {
+                jump = false;
+                jumpY = 0;
+                if (hero.getHeight()+hero.getYPos() <= floorHeight) {
+                    jump = true;
+                    jumpY = 59;
+                }
             }
         }
-
-
-//        }
     }
 
     @Override
@@ -153,7 +153,7 @@ public class LevelImpl implements Level {
 
     @Override
     public boolean jump() {
-        if (jumpTick != 0 || finish) {
+        if (jumpY != 0 || finish) {
             return false;
         }
         jump = true;
@@ -201,6 +201,28 @@ public class LevelImpl implements Level {
                 ((a.getXPos()+a.getWidth()) > b.getXPos())  &&
                 (a.getYPos() < (b.getYPos() + b.getHeight())) &&
                 ((a.getYPos() + a.getHeight()) > b.getYPos()));
+    }
+
+    private void handleCollision(Entity entity) {
+
+        if (hero.getYPos()+hero.getHeight() != entity.getYPos()) {
+            if (left) {
+                hero.moveRight();
+                left = false;
+            }
+            if (right) {
+                hero.moveLeft();
+                right = false;
+            }
+            if (jump) {
+                if (jumpY > 0) {
+                    hero.jump(60 - jumpY);
+                }
+                jump = false;
+            }
+        }
+
+
     }
 
 }
