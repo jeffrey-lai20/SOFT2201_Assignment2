@@ -29,7 +29,7 @@ public class LevelImpl implements Level {
     private double finishLine;
     private boolean finish;
     private int jumpY = 0;
-    private boolean col;
+    private boolean top;
 
     private Hero hero;
     private Cloud cloud1;
@@ -110,14 +110,37 @@ public class LevelImpl implements Level {
 
         cloudMove();
         if (getHeroX() == finishLine) finish = true;
+//        for (int i = 1; i < entities.size()-1; i++) {
+//            if (checkCollision(hero, entities.get(i))) {
+//                handleCollision(entities.get(i));
+//                jumpY = 0;
+//                col = true;
+//            } else {
+//                col = false;
+//            }
+//        }
+
+
         for (int i = 1; i < entities.size()-1; i++) {
             if (checkCollision(hero, entities.get(i))) {
                 handleCollision(entities.get(i));
-                jumpY = 0;
-                col = true;
-            } else {
-                col = false;
+                if (!checkOnTop(hero, entities.get(i)) && hero.getHeight() != floorHeight) {
+                    hero.desc(floorHeight);
+                }
+
             }
+        }
+
+        if ((left || right) && !jump && top) {
+            top = false;
+        }
+        if (!top && !jump) {
+            if (!hero.desc(floorHeight)) {
+                jump = false;
+                jumpY = 0;
+                top = true;
+            }
+
         }
 
 
@@ -130,12 +153,12 @@ public class LevelImpl implements Level {
         if (jump) {
             hero.jump(jumpY);
             jumpY++;
-            if (jumpY == 60) {
-                jump = false;
-                jumpY = 0;
-                if (hero.getHeight()+hero.getYPos() <= floorHeight) {
-                    jump = true;
-                    jumpY = 59;
+            top = false;
+            if (jumpY >= 30) {
+                if (!hero.desc(floorHeight)) {
+                    jump = false;
+                    jumpY = 0;
+                    top = true;
                 }
             }
         }
@@ -166,7 +189,8 @@ public class LevelImpl implements Level {
             left = false;
             return false;
         }
-            left = true;
+
+        left = true;
         return true;
     }
 
@@ -203,9 +227,46 @@ public class LevelImpl implements Level {
                 ((a.getYPos() + a.getHeight()) > b.getYPos()));
     }
 
-    private void handleCollision(Entity entity) {
+    private boolean checkOnTop (Entity a, Entity b) {
+//        System.out.println("xpos "+a.getXPos());
+//        System.out.println("xpos and width "+a.getXPos()+a.getWidth());
+//        System.out.println("e xpos "+b.getXPos());
+//        System.out.println("e xpos & width"+b.getXPos() + b.getWidth());
+//        System.out.println("y & height " + (a.getYPos() + a.getHeight()));
+//        System.out.println("bypos "+b.getYPos());
+//        top = true;
+//
+//        System.out.println("idk man " + (a.getXPos() + a.getWidth() < (b.getXPos())));
+//        if        ((a.getXPos() + a.getWidth() < (b.getXPos())) &&
+//                ((a.getXPos()) > b.getXPos() + b.getWidth()) && (((a.getYPos() + a.getHeight()) >= b.getYPos()-3) &&
+//                    ((a.getYPos() + a.getHeight()) <= b.getYPos()+3))) {
+//            System.out.println("Here");
+//            top = false;
+//
+//        }
+        return
+                ((a.getXPos() + a.getWidth() >= (b.getXPos())) &&
+                ((a.getXPos()) <= b.getXPos() + b.getWidth()) &&
+                ((a.getYPos() + a.getHeight()) >= b.getYPos()-3) &&
+                        ((a.getYPos() + a.getHeight()) <= b.getYPos()+3));
+    }
 
-        if (hero.getYPos()+hero.getHeight() != entity.getYPos()) {
+    private void handleCollision(Entity entity) {
+        System.out.println("jump" + jump);
+        System.out.println(checkOnTop(hero, entity));
+//        if (jump) {
+//            this.hero.jump(jumpY);
+//
+//        }
+        if (checkOnTop(hero, entity)) {
+//            jump = this.hero.desc(entity.getYPos()-3);
+            this.hero.setY(entity.getYPos()-this.hero.getHeight());
+            jump = false;
+            jumpY = 0;
+            top = true;
+
+        } else {
+//            jump = this.hero.desc(floorHeight);
             if (left) {
                 hero.moveRight();
                 left = false;
@@ -214,13 +275,13 @@ public class LevelImpl implements Level {
                 hero.moveLeft();
                 right = false;
             }
-            if (jump) {
-                if (jumpY > 0) {
-                    hero.jump(60 - jumpY);
-                }
-                jump = false;
-            }
+
+            System.out.println(checkOnTop(hero, entity));
         }
+
+
+
+
 
 
     }
