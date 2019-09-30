@@ -14,7 +14,7 @@ public class AbstractEntity implements Entity {
         this.xPos = xPos;
         this.yPos = yPos;
         if (this.entityName.equals("Platform1")) {
-            this.width = 16;
+            this.width = 91;
             this.height = 16;
         } else if (this.entityName.equals("Platform2")) {
             this.width = 16;
@@ -26,7 +26,7 @@ public class AbstractEntity implements Entity {
     @Override
     public String getImagePath() {
         if (entityName.equals("Platform1")) {
-            return "foot_tile.png";
+            return "foot_tile_medium.png";
         } else if (entityName.equals("Platform2")) {
             return "foot_tile.png";
         } else if (entityName.equals("FinishLineFlag")) {

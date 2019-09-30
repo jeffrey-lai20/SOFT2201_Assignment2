@@ -10,11 +10,9 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/Hero.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/Hero.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/HeroControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/HeroControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/AbstractEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/AbstractEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/LevelImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/LevelImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/HeroControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/HeroControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/AbstractEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/AbstractEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/LevelImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/LevelImpl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -114,7 +112,9 @@
       <workItem from="1569322818305" duration="7993000" />
       <workItem from="1569389400055" duration="15669000" />
       <workItem from="1569687323959" duration="3158000" />
-      <workItem from="1569720970866" duration="17092000" />
+      <workItem from="1569720970866" duration="22351000" />
+      <workItem from="1569763327884" duration="175000" />
+      <workItem from="1569829282273" duration="652000" />
     </task>
     <servers />
   </component>
