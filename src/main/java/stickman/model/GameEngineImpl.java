@@ -23,6 +23,7 @@ public class GameEngineImpl implements GameEngine {
     private double[] enemy;
     private double finishLine;
     private double startTime;
+    private int lives;
 
     /**
      * Constructor to initialise the game, taking in the JSON filename
@@ -41,6 +42,7 @@ public class GameEngineImpl implements GameEngine {
         this.enemyNumber = reader.getEnemyNumber();
         this.enemy = reader.getEnemy();
         this.finishLine = reader.getFinishLine();
+        this.lives = 2;
 
 
 
@@ -93,5 +95,29 @@ public class GameEngineImpl implements GameEngine {
     }
 
     public double getStartTime() { return this.startTime; }
+
+    public void restartLevel() {
+        this.currentLevel = new LevelImpl(xPos, cloudVelocity, stickmanSize,
+                levelNumber, platformNumber, platform, enemyNumber, enemy, finishLine);
+    }
+
+    public int getLives() {
+        return lives;
+    }
+
+    public boolean gameOver() {
+        if (lives == 0) {
+            currentLevel.gameOver();
+            return true;
+        }
+        return false;
+    }
+
+    public boolean heroDead() {
+        if (this.currentLevel.heroDead()) {
+            lives --;
+        }
+        return this.currentLevel.heroDead();
+    }
 }
 

@@ -32,6 +32,7 @@ public class GameWindow {
     private static final double VIEWPORT_MARGIN = 280.0;
 
     Text time;
+    Text lives;
 
     /**
      * Constructor for GameWindow. Sets the initial values of its
@@ -57,8 +58,9 @@ public class GameWindow {
         this.backgroundDrawer = new ParallaxBackground();
         backgroundDrawer.draw(model, pane);
         time = new Text();
+        lives = new Text();
         pane.getChildren().add(time);
-
+        pane.getChildren().add(lives);
     }
 
     /** Returns the scene. */
@@ -127,12 +129,32 @@ public class GameWindow {
         }
         entityViews.removeIf(EntityView::isMarkedForDelete);
 
+        if (model.heroDead()) {
+            try {
+                java.util.concurrent.TimeUnit.SECONDS.sleep(1);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            model.restartLevel();
+        }
         if (model.finish()) {
             Text finished = new Text("F I N I S H E D !");
             finished.setFont(new Font(50));
             finished.setX(model.getCurrentLevel().getWidth()/2-150);
             finished.setY(model.getCurrentLevel().getHeight()/2);
             pane.getChildren().add(finished);
+        } else if (model.gameOver()) {
+            Text finished = new Text("G A M E  O V E R !");
+            finished.setFont(new Font(50));
+            finished.setX(model.getCurrentLevel().getWidth()/2-200);
+            finished.setY(model.getCurrentLevel().getHeight()/2);
+            pane.getChildren().add(finished);
+
+            lives.setText("Lives: " + model.getLives());
+            lives.setFont(new Font(20));
+            lives.setX(width-100);
+            lives.setY(30);
+
         } else {
             elapsedTime = (new Date()).getTime() - model.getStartTime();
             elapsedTime = elapsedTime/1000;
@@ -140,6 +162,11 @@ public class GameWindow {
             time.setFont(new Font(20));
             time.setX(30);
             time.setY(30);
+
+            lives.setText("Lives: " + model.getLives());
+            lives.setFont(new Font(20));
+            lives.setX(width-100);
+            lives.setY(30);
         }
 
 

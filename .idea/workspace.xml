@@ -4,16 +4,39 @@
     <list default="true" id="f32fa7ba-77ce-45dc-befd-e681322e2b51" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6/javaCompile/taskHistory.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/AbstractEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/AbstractEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/Entity$Layer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/Entity$Layer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/Entity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/GameEngineImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/GameEngineImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/Hero.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/Hero.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/LevelImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/LevelImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/view/GameWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/view/GameWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/load.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/load.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/AbstractEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/AbstractEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/GameEngineImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/GameEngineImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/Hero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/LevelImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/LevelImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stickman/view/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/view/GameWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/load.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/load.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,8 +55,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -114,7 +137,9 @@
       <workItem from="1569687323959" duration="3158000" />
       <workItem from="1569720970866" duration="22351000" />
       <workItem from="1569763327884" duration="175000" />
-      <workItem from="1569829282273" duration="652000" />
+      <workItem from="1569829282273" duration="688000" />
+      <workItem from="1569987798849" duration="9099000" />
+      <workItem from="1570067446319" duration="11924000" />
     </task>
     <servers />
   </component>

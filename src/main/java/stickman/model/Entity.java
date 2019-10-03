@@ -14,6 +14,7 @@ public interface Entity {
     double getWidth();
     /** Returns the layer of the entity. */
     Layer getLayer();
+    boolean isEnemy();
     /** Enumeration for Layer's possible named constants. */
     enum Layer{
         BACKGROUND, FOREGROUND, EFFECT

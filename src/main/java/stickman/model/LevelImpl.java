@@ -30,12 +30,16 @@ public class LevelImpl implements Level {
     private boolean finish;
     private int jumpY = 0;
     private boolean top;
+    private boolean gameOver;
+
 
     private Hero hero;
     private Cloud cloud1;
     private Cloud cloud2;
     private AbstractEntity platform1;
     private AbstractEntity platform2;
+    private Enemy enemy1;
+    private Enemy enemy2;
     private AbstractEntity finishLineFlag;
     /**
      * Constructor to set initial dimensions and positions
@@ -78,6 +82,8 @@ public class LevelImpl implements Level {
         cloud2 = new Cloud("Cloud2", cloud2x, height - 230, size);
         platform1 = new AbstractEntity("Platform1",platform[0], platform[1], size);
         platform2 = new AbstractEntity("Platform2",platform[2], platform[3], size);
+        enemy1 = new Enemy("Enemy1", enemy[0], floorHeight-20, size);
+        enemy2 = new Enemy("Enemy2", enemy[1], floorHeight-20, size);
         finishLineFlag = new AbstractEntity("FinishLineFlag",finishLine, floorHeight-70, size);
 
     }
@@ -99,6 +105,7 @@ public class LevelImpl implements Level {
 
     @Override
     public void tick() {
+
         entities = new ArrayList<Entity> ();
         //Create a for loop to add numerous clouds and platforms and enemies later
         entities.add(0,hero);
@@ -106,25 +113,27 @@ public class LevelImpl implements Level {
         entities.add(2, cloud2);
         entities.add(3, platform1);
         entities.add(4, platform2);
-        entities.add(5, finishLineFlag);
+        entities.add(5, enemy1);
+        entities.add(6, enemy2);
+        entities.add(7, finishLineFlag);
 
         cloudMove();
+        enemy1.move();
+        enemy2.move();
         if (getHeroX() == finishLine) finish = true;
 
         for (int i = 1; i < entities.size()-1; i++) {
             if (checkCollision(hero, entities.get(i))) {
                 handleCollision(entities.get(i));
-                if (!checkOnTop(hero, entities.get(i)) && hero.getHeight() != floorHeight) {
-                    hero.desc(floorHeight);
-                }
+                checkOnTop(hero, entities.get(i));
             }
-
         }
 
         //if move left or right off the platform
         if ((left || right) && !jump && top) {
             top = false;
         }
+        System.out.println(top);
         //then go down
         if (!top && !jump) {
             if (!hero.desc(floorHeight)) {
@@ -135,10 +144,10 @@ public class LevelImpl implements Level {
         }
 
 
-        if (left && hero.getXPos() > 0 && !finish) {
+        if (left && hero.getXPos() > 0 && !finish &&!gameOver) {
             hero.moveLeft();
         }
-        if (right && !finish) {
+        if (right && !finish && !gameOver) {
             hero.moveRight();
         }
         if (jump) {
@@ -153,6 +162,8 @@ public class LevelImpl implements Level {
                 }
             }
         }
+
+
     }
 
     @Override
@@ -167,7 +178,7 @@ public class LevelImpl implements Level {
 
     @Override
     public boolean jump() {
-        if (jumpY != 0 || finish) {
+        if (jumpY != 0 || finish || gameOver) {
             return false;
         }
         jump = true;
@@ -176,7 +187,7 @@ public class LevelImpl implements Level {
 
     @Override
     public boolean moveLeft() {
-        if (finish) {
+        if (finish || gameOver) {
             left = false;
             return false;
         }
@@ -187,7 +198,7 @@ public class LevelImpl implements Level {
 
     @Override
     public boolean moveRight() {
-        if (finish) {
+        if (finish || gameOver) {
             left = false;
             return false;
         }
@@ -219,8 +230,8 @@ public class LevelImpl implements Level {
     }
 
     private boolean checkOnTop (Entity a, Entity b) {
-        if ((a.getXPos() + a.getWidth() > (b.getXPos()) ||
-                ((a.getXPos()) < b.getXPos() + b.getWidth())) &&
+        if ((a.getXPos() + a.getWidth() >= (b.getXPos()) ||
+                ((a.getXPos()) <= b.getXPos() + b.getWidth())) &&
                 (((a.getYPos() + a.getHeight()) >= b.getYPos()-3) &&
                 ((a.getYPos() + a.getHeight()) <= b.getYPos()+3))) {
             this.top = true;
@@ -233,18 +244,32 @@ public class LevelImpl implements Level {
     private void handleCollision(Entity entity) {
         if (checkOnTop(hero, entity)) {
             this.hero.setY(entity.getYPos()-this.hero.getHeight());
+            System.out.println(hero.getYPos());
             jump = false;
             jumpY = 0;
 
         } else {
+            if (entity.isEnemy()) {
+                hero.died();
+            }
             if (left) {
                 hero.moveRight();
                 left = false;
             }
+
             if (right) {
                 hero.moveLeft();
                 right = false;
             }
         }
     }
+
+    public boolean heroDead() {
+        return hero.isDead();
+    }
+
+    public void gameOver() {
+        this.gameOver = true;
+    }
+
 }

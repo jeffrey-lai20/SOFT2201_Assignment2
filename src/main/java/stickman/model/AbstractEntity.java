@@ -23,6 +23,10 @@ public class AbstractEntity implements Entity {
 
     }
 
+    public boolean isEnemy() {
+        return false;
+    }
+
     @Override
     public String getImagePath() {
         if (entityName.equals("Platform1")) {
@@ -31,6 +35,10 @@ public class AbstractEntity implements Entity {
             return "foot_tile.png";
         } else if (entityName.equals("FinishLineFlag")) {
             return "flag.png";
+        } else if (this.entityName.equals("Enemy1")) {
+            return "slimeBa.png";
+        } else if (this.entityName.equals("Enemy2")) {
+            return "slimeGa.png";
         }
         return null;
     }

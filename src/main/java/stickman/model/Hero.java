@@ -2,6 +2,8 @@ package stickman.model;
 
 public class Hero extends AbstractEntity implements HeroControl {
 
+    boolean dead = false;
+
     public Hero(String entityName, double xPos, double yPos, double size) {
         super(entityName, xPos, yPos, size);
         this.entityName = entityName;
@@ -40,14 +42,22 @@ public class Hero extends AbstractEntity implements HeroControl {
 
     @Override
     public boolean desc(double floorHeight) {
-        if (this.yPos >= floorHeight-this.height) {
+        if (this.yPos > floorHeight-this.height) {
             return false;
         }
         this.yPos += 3;
         return true;
     }
 
-    public void setY(double y) {
-        this.yPos = y;
+    public void setY(double newY) {
+        this.yPos = newY;
+    }
+
+    public void died() {
+        this.dead = true;
+    }
+
+    public boolean isDead() {
+        return this.dead;
     }
 }
