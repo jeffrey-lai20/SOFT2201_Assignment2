@@ -79,7 +79,7 @@ set CMD_LINE_ARGS=%*
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\Soft2201_Assignment2.jar;%APP_HOME%\lib\javafx-controls-12.0.2-win.jar;%APP_HOME%\lib\javafx-media-12.0.2-win.jar;%APP_HOME%\lib\javafx-graphics-12.0.2-win.jar;%APP_HOME%\lib\javafx-graphics-12.0.2.jar;%APP_HOME%\lib\javafx-base-12.0.2-win.jar;%APP_HOME%\lib\javafx-base-12.0.2.jar;%APP_HOME%\lib\json-simple-1.1.1.jar;%APP_HOME%\lib\junit-4.10.jar;%APP_HOME%\lib\hamcrest-core-1.1.jar
+set CLASSPATH=%APP_HOME%\lib\Soft2201_Assignment2.jar;%APP_HOME%\lib\javafx-media-12.0.2-win.jar;%APP_HOME%\lib\javafx-controls-12.0.2-win.jar;%APP_HOME%\lib\javafx-graphics-12.0.2-win.jar;%APP_HOME%\lib\javafx-graphics-12.0.2.jar;%APP_HOME%\lib\javafx-base-12.0.2-win.jar;%APP_HOME%\lib\javafx-base-12.0.2.jar;%APP_HOME%\lib\json-simple-1.1.1.jar;%APP_HOME%\lib\junit-4.10.jar;%APP_HOME%\lib\hamcrest-core-1.1.jar
 
 @rem Execute Soft2201_Assignment2
 "%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %SOFT2201_ASSIGNMENT2_OPTS%  -classpath "%CLASSPATH%" stickman.App %CMD_LINE_ARGS%

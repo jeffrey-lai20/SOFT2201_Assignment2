@@ -39,29 +39,20 @@ public class JsonReader {
             this.levelNumber = (long) stickman.get("levelNumber");
             this.platformNumber = (long) stickman.get("platformNumber");
             this.platform = new double[((int) platformNumber) * 2];
-//            for (int i = 0; i < platformNumber*2; i += 2) {
-//                JSONObject pf = (JSONObject) stickman.get("platform"+Integer.toString(i+1));
-//                this.platform[i] = (double) pf.get("x");
-//                this.platform[i+1] = (double) pf.get("y");
-//            }
+            for (int i = 0; i < platformNumber*2; i += 2) {
+                char num = (char) ((i/2)+'0');
+                JSONObject pf = (JSONObject) stickman.get("platform"+num);
+                this.platform[i] = (double) pf.get("x");
+                this.platform[i+1] = (double) pf.get("y");
+
+            }
             this.enemyNumber = (long) stickman.get("enemyNumber");
             this.enemy = new double[(int) enemyNumber];
-//            for (int j = 0; j < enemyNumber; j++) {
-//                JSONObject en = (JSONObject) stickman.get("enemy"+Integer.toString(j+1));
-//                this.enemy[j] = (double) en.get("x");
-//            }
-            JSONObject pf = (JSONObject) stickman.get("platform1");
-            this.platform[0] = (double) pf.get("x");
-            this.platform[1] = (double) pf.get("y");
-            JSONObject pf2 = (JSONObject) stickman.get("platform2");
-            this.platform[2] = (double) pf2.get("x");
-            this.platform[3] = (double) pf2.get("y");
-
-
-            JSONObject en = (JSONObject) stickman.get("enemy1");
-            this.enemy[0] = (double) en.get("x");
-            JSONObject en2 = (JSONObject) stickman.get("enemy2");
-            this.enemy[1] = (double) en2.get("x");
+            for (int j = 0; j < enemyNumber; j++) {
+                char num = (char) ((j)+'0');
+                JSONObject en = (JSONObject) stickman.get("enemy"+num);
+                this.enemy[j] = (double) en.get("x");
+            }
             this.finishLine = (double) stickman.get("finishLine");
 
         } catch (ParseException e) {
@@ -94,7 +85,6 @@ public class JsonReader {
     public long getPlatformNumber() {
         return platformNumber;
     }
-
 
     public double[] getPlatform() {
         return platform;

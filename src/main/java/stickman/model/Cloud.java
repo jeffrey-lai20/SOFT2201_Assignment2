@@ -3,7 +3,7 @@ package stickman.model;
 public class Cloud extends AbstractEntity {
 
     public Cloud(String entityName, double xPos, double yPos, double size) {
-        super(entityName, xPos, yPos, size);
+        super(entityName, xPos, yPos);
         this.entityName = entityName;
         this.xPos = xPos;
         this.yPos = yPos;

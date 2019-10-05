@@ -5,13 +5,13 @@ public class Hero extends AbstractEntity implements HeroControl {
     boolean dead = false;
 
     public Hero(String entityName, double xPos, double yPos, double size) {
-        super(entityName, xPos, yPos, size);
+        super(entityName, xPos, yPos);
         this.entityName = entityName;
         this.xPos = xPos;
         this.yPos = yPos;
         if (entityName.equals("Hero")) {
-            this.height = 34;
-            this.width = 20;
+            this.height = 34*size;
+            this.width = 20*size;
         }
     }
 

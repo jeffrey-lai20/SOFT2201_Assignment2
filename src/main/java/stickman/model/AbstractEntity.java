@@ -10,18 +10,14 @@ public class AbstractEntity implements Entity {
     Layer layer;
     boolean remove = false;
 
-    public AbstractEntity (String entityName, double xPos, double yPos, double size) {
+    public AbstractEntity (String entityName, double xPos, double yPos) {
         this.entityName = entityName;
         this.xPos = xPos;
         this.yPos = yPos;
-        if (this.entityName.equals("Platform1")) {
+        if (this.entityName.contains("Platform")) {
             this.width = 91;
             this.height = 16;
-        } else if (this.entityName.equals("Platform2")) {
-            this.width = 16;
-            this.height = 16;
         }
-
     }
 
     public boolean isEnemy() {
@@ -38,16 +34,10 @@ public class AbstractEntity implements Entity {
 
     @Override
     public String getImagePath() {
-        if (entityName.equals("Platform1")) {
+        if (entityName.contains("Platform")) {
             return "foot_tile_medium.png";
-        } else if (entityName.equals("Platform2")) {
-            return "foot_tile.png";
         } else if (entityName.equals("FinishLineFlag")) {
             return "flag.png";
-        } else if (this.entityName.equals("Enemy1")) {
-            return "slimeBa.png";
-        } else if (this.entityName.equals("Enemy2")) {
-            return "slimeGa.png";
         }
         return null;
     }

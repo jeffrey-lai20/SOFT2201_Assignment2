@@ -2,37 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f32fa7ba-77ce-45dc-befd-e681322e2b51" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/AbstractEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/AbstractEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/AccelerateEnemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/AccelerateEnemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/Cloud.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/Cloud.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/Enemy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/EnemyMove.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/Entity$Layer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/Entity$Layer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/Entity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/GameEngineImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/GameEngineImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/FastEnemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/FastEnemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/Hero.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/Hero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/JsonReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/JsonReader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/LevelImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/LevelImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/distributions/Soft2201_Assignment2.tar" beforeDir="false" afterPath="$PROJECT_DIR$/build/distributions/Soft2201_Assignment2.tar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/distributions/Soft2201_Assignment2.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/distributions/Soft2201_Assignment2.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/Soft2201_Assignment2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/Soft2201_Assignment2.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/load.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/load.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/scripts/Soft2201_Assignment2" beforeDir="false" afterPath="$PROJECT_DIR$/build/scripts/Soft2201_Assignment2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/scripts/Soft2201_Assignment2.bat" beforeDir="false" afterPath="$PROJECT_DIR$/build/scripts/Soft2201_Assignment2.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/AbstractEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/AbstractEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/AccelerateEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/AccelerateEnemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/Cloud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/Cloud.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/EnemyMove.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/GameEngineImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/GameEngineImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/FastEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/FastEnemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/JsonReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/JsonReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/LevelImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/LevelImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/load.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/load.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +70,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -137,7 +141,7 @@
       <workItem from="1569987798849" duration="9099000" />
       <workItem from="1570067446319" duration="14624000" />
       <workItem from="1570156156945" duration="14058000" />
-      <workItem from="1570247195593" duration="4962000" />
+      <workItem from="1570247195593" duration="22144000" />
     </task>
     <servers />
   </component>

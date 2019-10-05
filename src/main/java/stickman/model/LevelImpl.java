@@ -36,8 +36,10 @@ public class LevelImpl implements Level {
     private Hero hero;
     private Cloud cloud1;
     private Cloud cloud2;
+    private AbstractEntity[] platformEntities;
     private AbstractEntity platform1;
     private AbstractEntity platform2;
+    private Enemy[] enemyEntities;
     private Enemy enemy1;
     private Enemy enemy2;
     private AbstractEntity finishLineFlag;
@@ -51,13 +53,13 @@ public class LevelImpl implements Level {
     public LevelImpl (double heroX, double cloudVelocity, String stickmanSize, long levelNumber, long platformNumber,
                       double[] platform, long enemyNumber, double[] enemy, double finishLine) {
         if (stickmanSize.equalsIgnoreCase("tiny")) {
-            size = 20;
+            size = 0.75;
         } else if (stickmanSize.equalsIgnoreCase("normal")) {
-            size = 35;
+            size = 1;
         } else if (stickmanSize.equalsIgnoreCase("large")) {
-            size = 50;
+            size = 1.5;
         } else if (stickmanSize.equalsIgnoreCase("giant")) {
-            size = 70;
+            size = 2;
         } else {
             System.err.println("Incorrect stickman size input from JSON File.");
             System.exit(1);
@@ -77,14 +79,25 @@ public class LevelImpl implements Level {
         this.enemy = enemy;
         this.finishLine = finishLine;
         this.finish = false;
-        hero = new Hero("Hero", heroX, floorHeight-size, size);
+        hero = new Hero("Hero", heroX, floorHeight-34*size, size);
         cloud1 = new Cloud("Cloud1", cloud1x, height - 200, size);
         cloud2 = new Cloud("Cloud2", cloud2x, height - 230, size);
-        platform1 = new AbstractEntity("Platform1",platform[0], platform[1], size);
-        platform2 = new AbstractEntity("Platform2",platform[2], platform[3], size);
-        enemy1 = new Enemy("Enemy1", enemy[0], floorHeight-20, size);
-        enemy2 = new Enemy("Enemy2", enemy[1], floorHeight-20, size);
-        finishLineFlag = new AbstractEntity("FinishLineFlag",finishLine, floorHeight-70, size);
+        platformEntities = new AbstractEntity[(int) platformNumber];
+        for (int i = 0; i < platformNumber*2; i += 2) {
+            char num = (char) ((i/2)+'0');
+            platformEntities[i/2] = new AbstractEntity("Platform"+num,platform[i], platform[i+1]);
+            System.out.println("Platform"+num);
+            System.out.println(platform[i]);
+            System.out.println(platform[i+1]);
+
+        }
+        enemyEntities = new Enemy[(int) enemyNumber];
+        for (int i = 0; i < enemyNumber; i++) {
+            char num = (char) ((i)+'0');
+            System.out.println("here");
+            enemyEntities[i] = new Enemy("Enemy"+num,enemy[i], floorHeight-20, i);
+        }
+        finishLineFlag = new AbstractEntity("FinishLineFlag",finishLine, floorHeight-70);
 
     }
 
@@ -105,25 +118,25 @@ public class LevelImpl implements Level {
 
     @Override
     public void tick() {
-
         entities = new ArrayList<Entity> ();
         //Create a for loop to add numerous clouds and platforms and enemies later
         entities.add(hero);
         entities.add(cloud1);
         entities.add(cloud2);
-        entities.add(platform1);
-        entities.add(platform2);
-        if (!enemy1.getRemove()) {
-            entities.add(enemy1);
+        for (int i = 0; i < platformNumber; i++) {
+            entities.add(platformEntities[i]);
         }
-        if (!enemy2.getRemove()) {
-            entities.add(enemy2);
+        for (int i = 0; i < enemyNumber; i++) {
+            if (!enemyEntities[i].getRemove()) {
+                entities.add(enemyEntities[i]);
+                enemyEntities[i].move();
+            }
+
+
         }
         entities.add(finishLineFlag);
 
         cloudMove();
-        enemy1.move();
-        enemy2.move();
         if (getHeroX() == finishLine) finish = true;
 
         for (int i = 1; i < entities.size()-1; i++) {
@@ -134,11 +147,6 @@ public class LevelImpl implements Level {
                 i = entities.size()-1;
             }
         }
-
-        //if move left or right off the platform
-
-        System.out.println(top);
-        //then go down
         if (!top && !jump) {
             if (!hero.desc(floorHeight)) {
                 jump = false;
@@ -191,7 +199,7 @@ public class LevelImpl implements Level {
 
     @Override
     public boolean moveLeft() {
-        if (finish || gameOver) {
+        if (finish || gameOver && !jump) {
             left = false;
             return false;
         }
@@ -202,8 +210,8 @@ public class LevelImpl implements Level {
 
     @Override
     public boolean moveRight() {
-        if (finish || gameOver) {
-            left = false;
+        if (finish || gameOver && !jump) {
+            right = false;
             return false;
         }
             right = true;
@@ -246,7 +254,7 @@ public class LevelImpl implements Level {
     private void handleCollision(Entity entity) {
         if (checkOnTop(hero, entity)) {
             this.hero.setY(entity.getYPos()-this.hero.getHeight());
-            System.out.println(hero.getYPos());
+//            System.out.println(hero.getYPos());
             jump = false;
             jumpY = 0;
             if (entity.isEnemy()) {
@@ -264,6 +272,10 @@ public class LevelImpl implements Level {
             if (right) {
                 hero.moveLeft();
                 right = false;
+            }
+
+            if (jump) {
+                hero.desc(floorHeight);
             }
         }
     }
