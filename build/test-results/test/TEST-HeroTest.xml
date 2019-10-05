@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="HeroTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-10-05T21:50:45" hostname="DESKTOP-23IEG76" time="0.003">
+  <properties/>
+  <testcase name="basicTest" classname="HeroTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

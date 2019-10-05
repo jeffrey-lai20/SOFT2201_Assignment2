@@ -2,41 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f32fa7ba-77ce-45dc-befd-e681322e2b51" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/App.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/AbstractEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/AbstractEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/AccelerateEnemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/AccelerateEnemy.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/Cloud.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/Cloud.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/Enemy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/FastEnemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/FastEnemy.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/Hero.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/Hero.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/JsonReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/JsonReader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/LevelImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/LevelImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/distributions/Soft2201_Assignment2.tar" beforeDir="false" afterPath="$PROJECT_DIR$/build/distributions/Soft2201_Assignment2.tar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/distributions/Soft2201_Assignment2.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/distributions/Soft2201_Assignment2.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/Soft2201_Assignment2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/Soft2201_Assignment2.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/load.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/load.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/scripts/Soft2201_Assignment2" beforeDir="false" afterPath="$PROJECT_DIR$/build/scripts/Soft2201_Assignment2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/scripts/Soft2201_Assignment2.bat" beforeDir="false" afterPath="$PROJECT_DIR$/build/scripts/Soft2201_Assignment2.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/HeroTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/HeroTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/load.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stickman/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/AbstractEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/AbstractEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/AccelerateEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/AccelerateEnemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/Cloud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/Cloud.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/FastEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/FastEnemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/JsonReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/JsonReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/LevelImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/LevelImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/load.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/load.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/easy.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/easy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/load.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/medium.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/HeroTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HeroTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +92,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.HeroTest">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk-11.0.4" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -108,8 +108,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HeroTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;HeroTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.HeroTest" />
         <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
@@ -141,7 +162,7 @@
       <workItem from="1569987798849" duration="9099000" />
       <workItem from="1570067446319" duration="14624000" />
       <workItem from="1570156156945" duration="14058000" />
-      <workItem from="1570247195593" duration="22144000" />
+      <workItem from="1570247195593" duration="27646000" />
     </task>
     <servers />
   </component>

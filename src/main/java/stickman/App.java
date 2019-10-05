@@ -33,7 +33,7 @@ public class App extends Application {
                     " as your code will fail to compile on Java 10 and below.");
         }
 
-        GameEngineImpl model = new GameEngineImpl("src/main/resources/load.json");
+        GameEngineImpl model = new GameEngineImpl("src/main/resources/medium.json");
         GameWindow window = new GameWindow(model, 640, 400);
         window.run();
 

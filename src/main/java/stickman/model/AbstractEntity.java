@@ -2,7 +2,6 @@ package stickman.model;
 
 public class AbstractEntity implements Entity {
 
-    String entityName;
     double xPos;
     double yPos;
     double height;
@@ -10,14 +9,9 @@ public class AbstractEntity implements Entity {
     Layer layer;
     boolean remove = false;
 
-    public AbstractEntity (String entityName, double xPos, double yPos) {
-        this.entityName = entityName;
+    public AbstractEntity (double xPos, double yPos) {
         this.xPos = xPos;
         this.yPos = yPos;
-        if (this.entityName.contains("Platform")) {
-            this.width = 91;
-            this.height = 16;
-        }
     }
 
     public boolean isEnemy() {
@@ -34,11 +28,6 @@ public class AbstractEntity implements Entity {
 
     @Override
     public String getImagePath() {
-        if (entityName.contains("Platform")) {
-            return "foot_tile_medium.png";
-        } else if (entityName.equals("FinishLineFlag")) {
-            return "flag.png";
-        }
         return null;
     }
 
@@ -65,9 +54,6 @@ public class AbstractEntity implements Entity {
     @Override
     public Layer getLayer() {
         this.layer = Layer.FOREGROUND;
-        if (entityName.equals("FinishLineFlag")) {
-            this.layer = Layer.BACKGROUND;
-        }
         return this.layer;
     }
 }

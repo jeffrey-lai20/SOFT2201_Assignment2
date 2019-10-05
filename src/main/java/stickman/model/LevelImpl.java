@@ -15,6 +15,7 @@ public class LevelImpl implements Level {
     private double heroX;
     private double cloudVelocity;
     private List<Entity> entities;
+    private int numClouds;
     private double cloud1x;
     private double cloud2x;
     private boolean left;
@@ -34,15 +35,12 @@ public class LevelImpl implements Level {
 
 
     private Hero hero;
+    private Cloud[] clouds;
     private Cloud cloud1;
     private Cloud cloud2;
-    private AbstractEntity[] platformEntities;
-    private AbstractEntity platform1;
-    private AbstractEntity platform2;
+    private PlatformEntity[] platformEntities;
     private Enemy[] enemyEntities;
-    private Enemy enemy1;
-    private Enemy enemy2;
-    private AbstractEntity finishLineFlag;
+    private FlagEntity finishLineFlag;
     /**
      * Constructor to set initial dimensions and positions
      * of the level and its entities.
@@ -69,9 +67,10 @@ public class LevelImpl implements Level {
         this.floorHeight = 300;
         this.heroX = heroX;
         this.cloudVelocity = cloudVelocity;
-        this.entities = new ArrayList<Entity> ();
-        this.cloud1x = 150;
-        this.cloud2x = 500;
+        this.entities = new ArrayList<>();
+        numClouds = 10;
+        this.cloud1x = 100;
+        this.cloud2x = 50;
         this.levelNumber = levelNumber;
         this.platformNumber = platformNumber;
         this.platform = platform;
@@ -79,25 +78,25 @@ public class LevelImpl implements Level {
         this.enemy = enemy;
         this.finishLine = finishLine;
         this.finish = false;
-        hero = new Hero("Hero", heroX, floorHeight-34*size, size);
-        cloud1 = new Cloud("Cloud1", cloud1x, height - 200, size);
-        cloud2 = new Cloud("Cloud2", cloud2x, height - 230, size);
-        platformEntities = new AbstractEntity[(int) platformNumber];
+        hero = new Hero(heroX, floorHeight-34*size, size);
+        clouds = new Cloud[numClouds];
+        for (int i = 0; i < numClouds; i++) {
+            if (i % 2 == 0)
+            clouds[i] = new Cloud((cloud1x+100*i), height - 200, i);
+            if (i % 2 == 1)
+                clouds[i] = new Cloud(cloud2x+150*i, height - 200, i);
+        }
+        platformEntities = new PlatformEntity[(int) platformNumber];
         for (int i = 0; i < platformNumber*2; i += 2) {
-            char num = (char) ((i/2)+'0');
-            platformEntities[i/2] = new AbstractEntity("Platform"+num,platform[i], platform[i+1]);
-            System.out.println("Platform"+num);
-            System.out.println(platform[i]);
-            System.out.println(platform[i+1]);
+            platformEntities[i/2] = new PlatformEntity(platform[i], platform[i+1]);
 
         }
         enemyEntities = new Enemy[(int) enemyNumber];
         for (int i = 0; i < enemyNumber; i++) {
-            char num = (char) ((i)+'0');
             System.out.println("here");
-            enemyEntities[i] = new Enemy("Enemy"+num,enemy[i], floorHeight-20, i);
+            enemyEntities[i] = new Enemy(enemy[i], floorHeight-20, i);
         }
-        finishLineFlag = new AbstractEntity("FinishLineFlag",finishLine, floorHeight-70);
+        finishLineFlag = new FlagEntity("FinishLineFlag",finishLine, floorHeight-70);
 
     }
 
@@ -121,8 +120,9 @@ public class LevelImpl implements Level {
         entities = new ArrayList<Entity> ();
         //Create a for loop to add numerous clouds and platforms and enemies later
         entities.add(hero);
-        entities.add(cloud1);
-        entities.add(cloud2);
+        for (int i = 0; i < numClouds; i ++) {
+            entities.add(clouds[i]);
+        }
         for (int i = 0; i < platformNumber; i++) {
             entities.add(platformEntities[i]);
         }
@@ -230,8 +230,11 @@ public class LevelImpl implements Level {
     }
 
     private void cloudMove() {
-        cloud1.move(cloudVelocity);
-        cloud2.move(cloudVelocity);
+//        cloud1.move(cloudVelocity);
+//        cloud2.move(cloudVelocity);
+        for (int i = 0; i < numClouds; i++) {
+            clouds[i].move(cloudVelocity);
+        }
     }
 
     private boolean checkCollision (Entity a, Entity b) {

@@ -4,23 +4,17 @@ public class Hero extends AbstractEntity implements HeroControl {
 
     boolean dead = false;
 
-    public Hero(String entityName, double xPos, double yPos, double size) {
-        super(entityName, xPos, yPos);
-        this.entityName = entityName;
+    public Hero(double xPos, double yPos, double size) {
+        super(xPos, yPos);
         this.xPos = xPos;
         this.yPos = yPos;
-        if (entityName.equals("Hero")) {
-            this.height = 34*size;
-            this.width = 20*size;
-        }
+        this.height = 34*size;
+        this.width = 20*size;
     }
 
     @Override
     public String getImagePath() {
-        if (entityName.equals("Hero") ) {
-            return "ch_stand1.png";
-        }
-        return null;
+        return "ch_stand1.png";
     }
 
     @Override
