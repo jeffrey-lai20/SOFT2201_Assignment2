@@ -15,6 +15,9 @@ public interface Entity {
     /** Returns the layer of the entity. */
     Layer getLayer();
     boolean isEnemy();
+    void remove();
+    boolean getRemove();
+
     /** Enumeration for Layer's possible named constants. */
     enum Layer{
         BACKGROUND, FOREGROUND, EFFECT

@@ -42,7 +42,7 @@ public class GameEngineImpl implements GameEngine {
         this.enemyNumber = reader.getEnemyNumber();
         this.enemy = reader.getEnemy();
         this.finishLine = reader.getFinishLine();
-        this.lives = 2;
+        this.lives = 3;
 
 
 

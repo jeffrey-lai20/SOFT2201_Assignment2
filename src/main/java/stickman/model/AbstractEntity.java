@@ -8,6 +8,7 @@ public class AbstractEntity implements Entity {
     double height;
     double width;
     Layer layer;
+    boolean remove = false;
 
     public AbstractEntity (String entityName, double xPos, double yPos, double size) {
         this.entityName = entityName;
@@ -25,6 +26,14 @@ public class AbstractEntity implements Entity {
 
     public boolean isEnemy() {
         return false;
+    }
+
+    public void remove() {
+        this.remove = true;
+    }
+
+    public boolean getRemove() {
+        return this.remove;
     }
 
     @Override

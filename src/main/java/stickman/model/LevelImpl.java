@@ -108,14 +108,18 @@ public class LevelImpl implements Level {
 
         entities = new ArrayList<Entity> ();
         //Create a for loop to add numerous clouds and platforms and enemies later
-        entities.add(0,hero);
-        entities.add(1, cloud1);
-        entities.add(2, cloud2);
-        entities.add(3, platform1);
-        entities.add(4, platform2);
-        entities.add(5, enemy1);
-        entities.add(6, enemy2);
-        entities.add(7, finishLineFlag);
+        entities.add(hero);
+        entities.add(cloud1);
+        entities.add(cloud2);
+        entities.add(platform1);
+        entities.add(platform2);
+        if (!enemy1.getRemove()) {
+            entities.add(enemy1);
+        }
+        if (!enemy2.getRemove()) {
+            entities.add(enemy2);
+        }
+        entities.add(finishLineFlag);
 
         cloudMove();
         enemy1.move();
@@ -123,16 +127,16 @@ public class LevelImpl implements Level {
         if (getHeroX() == finishLine) finish = true;
 
         for (int i = 1; i < entities.size()-1; i++) {
+            top = false;
             if (checkCollision(hero, entities.get(i))) {
                 handleCollision(entities.get(i));
                 checkOnTop(hero, entities.get(i));
+                i = entities.size()-1;
             }
         }
 
         //if move left or right off the platform
-        if ((left || right) && !jump && top) {
-            top = false;
-        }
+
         System.out.println(top);
         //then go down
         if (!top && !jump) {
@@ -235,8 +239,6 @@ public class LevelImpl implements Level {
                 (((a.getYPos() + a.getHeight()) >= b.getYPos()-3) &&
                 ((a.getYPos() + a.getHeight()) <= b.getYPos()+3))) {
             this.top = true;
-        } else {
-            this.top = false;
         }
         return top;
     }
@@ -247,7 +249,9 @@ public class LevelImpl implements Level {
             System.out.println(hero.getYPos());
             jump = false;
             jumpY = 0;
-
+            if (entity.isEnemy()) {
+                entity.remove();
+            }
         } else {
             if (entity.isEnemy()) {
                 hero.died();

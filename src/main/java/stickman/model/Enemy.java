@@ -1,8 +1,9 @@
 package stickman.model;
 
-public class Enemy extends AbstractEntity implements EnemyMove {
+public class Enemy extends AbstractEntity {
 
     private int eMove = 0;
+    private EnemyContext enemCon;
 
     public Enemy(String entityName, double xPos, double yPos, double size) {
         super(entityName, xPos, yPos, size);
@@ -10,35 +11,24 @@ public class Enemy extends AbstractEntity implements EnemyMove {
         this.xPos = xPos;
         this.yPos = yPos;
         if (this.entityName.equals("Enemy1")) {
+            enemCon = new EnemyContext(new AccelerateEnemy());
             this.width = 30;
             this.height = 30;
         } else if (this.entityName.equals("Enemy2")) {
+            enemCon = new EnemyContext(new FastEnemy());
             this.width = 30;
             this.height = 30;
         }
     }
 
     public void move() {
-        System.out.println(eMove);
-        if (eMove <= 50) {
-            moveRight();
-        } else if (eMove < 100) {
-            moveLeft();
-        } else {
-            eMove = 0;
+        if (eMove <= 100) {
+            if (eMove == 100) {
+                eMove = 0;
+            }
+            this.xPos = enemCon.enemyMove(xPos, eMove);
+            eMove++;
         }
-        eMove++;
-    }
-
-
-    @Override
-    public void moveLeft() {
-        this.xPos--;
-    }
-
-    @Override
-    public void moveRight() {
-        this.xPos++;
     }
 
     @Override
