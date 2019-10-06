@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="HeroTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-10-05T21:50:45" hostname="DESKTOP-23IEG76" time="0.003">
+<testsuite name="HeroTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2019-10-06T08:21:19" hostname="DESKTOP-23IEG76" time="0.001">
   <properties/>
-  <testcase name="basicTest" classname="HeroTest" time="0.003"/>
+  <testcase name="basicTest" classname="HeroTest" time="0.0"/>
+  <testcase name="getImageTest" classname="HeroTest" time="0.0"/>
+  <testcase name="jumpTest" classname="HeroTest" time="0.0"/>
+  <testcase name="moveRightTest" classname="HeroTest" time="0.001"/>
+  <testcase name="deadTest" classname="HeroTest" time="0.0"/>
+  <testcase name="sizeTest" classname="HeroTest" time="0.0"/>
+  <testcase name="descTest" classname="HeroTest" time="0.0"/>
+  <testcase name="setYTest" classname="HeroTest" time="0.0"/>
+  <testcase name="moveLeftTest" classname="HeroTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

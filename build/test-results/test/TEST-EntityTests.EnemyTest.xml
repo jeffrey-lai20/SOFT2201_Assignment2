@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="EntityTests.EnemyTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-10-06T08:21:19" hostname="DESKTOP-23IEG76" time="0.002">
+  <properties/>
+  <testcase name="basicTest" classname="EntityTests.EnemyTest" time="0.0"/>
+  <testcase name="imagePathTest" classname="EntityTests.EnemyTest" time="0.0"/>
+  <testcase name="moveTest" classname="EntityTests.EnemyTest" time="0.0"/>
+  <testcase name="isEnemyTest" classname="EntityTests.EnemyTest" time="0.0"/>
+  <testcase name="removeTest" classname="EntityTests.EnemyTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

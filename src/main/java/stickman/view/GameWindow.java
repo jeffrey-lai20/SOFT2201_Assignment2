@@ -6,8 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
 import javafx.util.Duration;
-import stickman.model.Entity;
-import stickman.model.GameEngine;
+import stickman.model.Entity.Entity;
 import stickman.model.GameEngineImpl;
 import javafx.scene.text.Text;
 

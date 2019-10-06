@@ -1,5 +1,7 @@
 package stickman.model;
 
+import stickman.model.Entity.*;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -96,7 +98,7 @@ public class LevelImpl implements Level {
             System.out.println("here");
             enemyEntities[i] = new Enemy(enemy[i], floorHeight-20, i);
         }
-        finishLineFlag = new FlagEntity("FinishLineFlag",finishLine, floorHeight-70);
+        finishLineFlag = new FlagEntity(finishLine, floorHeight-70);
 
     }
 

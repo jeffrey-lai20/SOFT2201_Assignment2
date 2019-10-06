@@ -3,7 +3,7 @@ package stickman.view;
 import javafx.scene.Node;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import stickman.model.Entity;
+import stickman.model.Entity.Entity;
 
 /**
  * Implements the interface EntityView,
