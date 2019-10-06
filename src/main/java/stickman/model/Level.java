@@ -17,8 +17,8 @@ public interface Level {
      * Updates the position of entities for each frame. Cloud positions
      * are updated with the given cloud velocity, and speed up or slow down
      * relative to the hero's movement. Handles the hero's movement and
-     * restricts double jumps, moving past boundaries, and sets the camera
-     * to follow the hero.
+     * restricts double jumps, moving past boundaries, and handles
+     * interactions with entities.
      */
     void tick();
 

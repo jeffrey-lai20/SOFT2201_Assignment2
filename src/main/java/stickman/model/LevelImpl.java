@@ -14,38 +14,29 @@ public class LevelImpl implements Level {
     private double height;
     private double width;
     private double floorHeight;
-    private double heroX;
     private double cloudVelocity;
     private List<Entity> entities;
     private int numClouds;
-    private double cloud1x;
-    private double cloud2x;
     private boolean left;
     private boolean right;
     private boolean jump;
     private double size;
-    private long levelNumber;
     private long platformNumber;
-    private double[] platform;
     private long enemyNumber;
-    private double[] enemy;
     private double finishLine;
     private boolean finish;
     private int jumpY = 0;
     private boolean top;
     private boolean gameOver;
-
-
     private Hero hero;
     private Cloud[] clouds;
-    private Cloud cloud1;
-    private Cloud cloud2;
     private PlatformEntity[] platformEntities;
     private Enemy[] enemyEntities;
     private FlagEntity finishLineFlag;
+
     /**
-     * Constructor to set initial dimensions and positions
-     * of the level and its entities.
+     * Constructor to set initial dimensions of the level, set the size of the hero,
+     * and set the positions of the hero, platforms, enemies, clouds, and finish line.
      * @param heroX
      * @param cloudVelocity
      * @param stickmanSize
@@ -67,35 +58,27 @@ public class LevelImpl implements Level {
         this.height = 300;
         this.width = 640;
         this.floorHeight = 300;
-        this.heroX = heroX;
         this.cloudVelocity = cloudVelocity;
         this.entities = new ArrayList<>();
         numClouds = 10;
-        this.cloud1x = 100;
-        this.cloud2x = 50;
-        this.levelNumber = levelNumber;
+        double cloud1x = 100;
+        double cloud2x = 50;
         this.platformNumber = platformNumber;
-        this.platform = platform;
         this.enemyNumber = enemyNumber;
-        this.enemy = enemy;
         this.finishLine = finishLine;
         this.finish = false;
         hero = new Hero(heroX, floorHeight-34*size, size);
         clouds = new Cloud[numClouds];
         for (int i = 0; i < numClouds; i++) {
-            if (i % 2 == 0)
-            clouds[i] = new Cloud((cloud1x+100*i), height - 200, i);
-            if (i % 2 == 1)
-                clouds[i] = new Cloud(cloud2x+150*i, height - 200, i);
+            if (i % 2 == 0) clouds[i] = new Cloud((cloud1x +100*i), height - 200, i);
+            if (i % 2 == 1) clouds[i] = new Cloud(cloud2x +150*i, height - 200, i);
         }
         platformEntities = new PlatformEntity[(int) platformNumber];
         for (int i = 0; i < platformNumber*2; i += 2) {
             platformEntities[i/2] = new PlatformEntity(platform[i], platform[i+1]);
-
         }
         enemyEntities = new Enemy[(int) enemyNumber];
         for (int i = 0; i < enemyNumber; i++) {
-            System.out.println("here");
             enemyEntities[i] = new Enemy(enemy[i], floorHeight-20, i);
         }
         finishLineFlag = new FlagEntity(finishLine, floorHeight-70);
@@ -119,8 +102,7 @@ public class LevelImpl implements Level {
 
     @Override
     public void tick() {
-        entities = new ArrayList<Entity> ();
-        //Create a for loop to add numerous clouds and platforms and enemies later
+        entities = new ArrayList<> ();
         entities.add(hero);
         for (int i = 0; i < numClouds; i ++) {
             entities.add(clouds[i]);
@@ -133,14 +115,10 @@ public class LevelImpl implements Level {
                 entities.add(enemyEntities[i]);
                 enemyEntities[i].move();
             }
-
-
         }
         entities.add(finishLineFlag);
-
         cloudMove();
         if (getHeroX() == finishLine) finish = true;
-
         for (int i = 1; i < entities.size()-1; i++) {
             top = false;
             if (checkCollision(hero, entities.get(i))) {
@@ -156,8 +134,6 @@ public class LevelImpl implements Level {
                 top = true;
             }
         }
-
-
         if (left && hero.getXPos() > 0 && !finish &&!gameOver) {
             hero.moveLeft();
         }
@@ -176,8 +152,6 @@ public class LevelImpl implements Level {
                 }
             }
         }
-
-
     }
 
     @Override
@@ -227,16 +201,30 @@ public class LevelImpl implements Level {
         return true;
     }
 
+    /**
+     * Returns a boolean representing whether or not the game is finished.
+     * @return
+     */
     public boolean finish() {
         return finish;
     }
 
+    /**
+     * Handles movements for the clouds, according to the given cloud velocity.
+     */
     private void cloudMove() {
         for (int i = 0; i < numClouds; i++) {
             clouds[i].move(cloudVelocity);
         }
     }
 
+    /**
+     * Checks for any intersection/collision between the hero entity, 'a',
+     * and other entities, 'b'. If there is any intersection, true is returned.
+     * @param a
+     * @param b
+     * @return
+     */
     private boolean checkCollision (Entity a, Entity b) {
         return (a.getXPos() < (b.getXPos() + b.getWidth()) &&
                 ((a.getXPos()+a.getWidth()) > b.getXPos())  &&
@@ -244,6 +232,13 @@ public class LevelImpl implements Level {
                 ((a.getYPos() + a.getHeight()) > b.getYPos()));
     }
 
+    /**
+     * Checks for an intersection/collision between the bottom of 'a' and
+     * the top of 'b'. A discrepancy of 3 pixels above or below is allowed.
+     * @param a
+     * @param b
+     * @return
+     */
     private boolean checkOnTop (Entity a, Entity b) {
         if ((a.getXPos() + a.getWidth() >= (b.getXPos()) ||
                 ((a.getXPos()) <= b.getXPos() + b.getWidth())) &&
@@ -254,41 +249,45 @@ public class LevelImpl implements Level {
         return top;
     }
 
+    /**
+     * Handles the collision between the hero and the given entity. If the hero is
+     * above the entity, it will stay on top if it is a platform. Otherwise if the
+     * entity is an enemy, it will kill it. Also prevents the movement into
+     * intersections of the hero and entities.
+     * @param entity
+     */
     private void handleCollision(Entity entity) {
         if (checkOnTop(hero, entity)) {
             this.hero.setY(entity.getYPos()-this.hero.getHeight());
-//            System.out.println(hero.getYPos());
             jump = false;
             jumpY = 0;
-            if (entity.isEnemy()) {
-                entity.remove();
-            }
+            if (entity.isEnemy()) entity.remove();
         } else {
-            if (entity.isEnemy()) {
-                hero.died();
-            }
+            if (entity.isEnemy()) hero.died();
             if (left) {
                 hero.moveRight();
                 left = false;
             }
-
             if (right) {
                 hero.moveLeft();
                 right = false;
             }
-
-            if (jump) {
-                hero.desc(floorHeight);
-            }
+            if (jump) hero.desc(floorHeight);
         }
     }
 
+    /**
+     * Returns a boolean flag to determine whether the hero is dead or not.
+     * @return
+     */
     public boolean heroDead() {
         return hero.isDead();
     }
 
+    /**
+     * Sets a boolean flag to determine that the game is over.
+     */
     public void gameOver() {
         this.gameOver = true;
     }
-
 }

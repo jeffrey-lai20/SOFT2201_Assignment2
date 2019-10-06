@@ -53,7 +53,6 @@ public class GameWindow {
         scene.setOnKeyPressed(keyboardInputHandler::handlePressed);
         scene.setOnKeyReleased(keyboardInputHandler::handleReleased);
 
-//        this.backgroundDrawer = new BlockedBackground();
         this.backgroundDrawer = new ParallaxBackground();
         backgroundDrawer.draw(model, pane);
         time = new Text();
@@ -76,7 +75,11 @@ public class GameWindow {
         timeline.play();
     }
 
-    /** Draws and updates the game window and all its entities. */
+    /**
+     * Draws and updates the game window and all its entities. Also
+     * continuously updates the time and number of lives on the the
+     * game window, and displays end-game messages.
+     */
     private void draw() {
         model.tick();
 
@@ -89,16 +92,13 @@ public class GameWindow {
         double heroXPos = model.getCurrentLevel().getHeroX();
         heroXPos -= xViewportOffset;
 
-        //viewport margin is 280
-        //if hero is less than 280
         if (heroXPos < VIEWPORT_MARGIN) {
-            if (xViewportOffset >= 0) { // Don't go further left than the start of the level
+            if (xViewportOffset >= 0) {
                 xViewportOffset -= VIEWPORT_MARGIN - heroXPos;
                 if (xViewportOffset < 0) {
                     xViewportOffset = 0;
                 }
             }
-            //hero is greater than 360
         } else if (heroXPos > width - VIEWPORT_MARGIN) {
             xViewportOffset += heroXPos - (width - VIEWPORT_MARGIN);
         }
@@ -161,7 +161,6 @@ public class GameWindow {
             time.setFont(new Font(20));
             time.setX(30);
             time.setY(30);
-
             lives.setText("Lives: " + model.getLives());
             lives.setFont(new Font(20));
             lives.setX(width-100);

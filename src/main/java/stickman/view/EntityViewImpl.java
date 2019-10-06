@@ -30,6 +30,11 @@ public class EntityViewImpl implements EntityView {
         update(0);
     }
 
+    /**
+     * Sets the depth of layer, according to the input.
+     * @param layer
+     * @return
+     */
     private double getViewOrder(Entity.Layer layer) {
         switch (layer) {
             case BACKGROUND: return 100.0;

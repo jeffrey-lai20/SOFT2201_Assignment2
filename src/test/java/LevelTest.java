@@ -24,6 +24,7 @@ public class LevelTest {
         assertTrue(level.jump());
         assertTrue(level.moveLeft());
         assertTrue(level.moveRight());
+        level.tick();
         assertTrue(level.stopMoving());
     }
 

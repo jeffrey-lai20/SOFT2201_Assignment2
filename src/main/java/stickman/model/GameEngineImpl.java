@@ -27,8 +27,8 @@ public class GameEngineImpl implements GameEngine {
 
     /**
      * Constructor to initialise the game, taking in the JSON filename
-     * as a String parameter. Reads the variable information from the
-     * JSON file and starts the level with appropriate values.
+     * as a String parameter. Initialises variables with a JSON file reader
+     * and starts the level with appropriate values.
      * @param jsonFile
      */
     public GameEngineImpl(String jsonFile) throws FileNotFoundException {
@@ -88,21 +88,41 @@ public class GameEngineImpl implements GameEngine {
         this.currentLevel.tick();
     }
 
+    /**
+     * Returns whether or not the level has been completed.
+     * @return
+     */
     public boolean finish() {
         return this.currentLevel.finish();
     }
 
+    /**
+     * Returns the time that the game has started as a double.
+     * @return
+     */
     public double getStartTime() { return this.startTime; }
 
+    /**
+     * Refreshes the current level to its initial values.
+     */
     public void restartLevel() {
         this.currentLevel = new LevelImpl(xPos, cloudVelocity, stickmanSize,
                 levelNumber, platformNumber, platform, enemyNumber, enemy, finishLine);
     }
 
+    /**
+     * Returns the number of lives the hero has.
+     * @return
+     */
     public int getLives() {
         return lives;
     }
 
+    /**
+     * Checks whether of not the hero is still alive. Sets a flag
+     * to notify that the game is over if the hero's lives left is 0.
+     * @return
+     */
     public boolean gameOver() {
         if (lives == 0) {
             currentLevel.gameOver();
@@ -111,6 +131,10 @@ public class GameEngineImpl implements GameEngine {
         return false;
     }
 
+    /**
+     * Decreases the hero's lives by 1 if a flag from level is raised.
+     * @return
+     */
     public boolean heroDead() {
         if (this.currentLevel.heroDead()) {
             lives --;

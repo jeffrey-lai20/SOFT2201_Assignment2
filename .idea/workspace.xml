@@ -11,45 +11,57 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/workspace-id.txt.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/workspace-id.txt.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/GameEngineImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/GameEngineImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/CloudTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/EnemyTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/FlagTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/HeroTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/PlatformTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/CloudTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/EnemyTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/JsonReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/JsonReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/model/LevelImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/model/LevelImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/view/EntityViewImpl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/view/EntityViewImpl$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/view/EntityViewImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/view/EntityViewImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/view/GameWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/view/GameWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/stickman/view/ParallaxBackground.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/stickman/view/ParallaxBackground.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/LevelTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/LevelTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/EntityTests.CloudTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/EntityTests.CloudTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/EntityTests.EnemyTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/EntityTests.EnemyTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/EntityTests.FlagTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/EntityTests.FlagTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/EntityTests.HeroTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/EntityTests.HeroTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/EntityTests.PlatformTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/EntityTests.PlatformTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/FlagTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/HeroTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/PlatformTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/GameEngineTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/GameEngineTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/JsonTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/JsonTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/LevelTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/LevelTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/EntityTests.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/EntityTests.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-CloudTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-EnemyTest.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-EntityTests.CloudTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-EntityTests.CloudTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-EntityTests.EnemyTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-EntityTests.EnemyTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-EntityTests.FlagTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-EntityTests.FlagTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-EntityTests.HeroTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-EntityTests.HeroTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-EntityTests.PlatformTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-EntityTests.PlatformTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-FlagTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-HeroTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-PlatformTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-GameEngineTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-GameEngineTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-JsonTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-JsonTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-LevelTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-LevelTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/GameEngineImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/GameEngineImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/JsonReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/JsonReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/Level.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stickman/model/LevelImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/model/LevelImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/EntityTests/FlagTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/EntityTests/FlagTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stickman/view/EntityViewImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/view/EntityViewImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stickman/view/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/view/GameWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stickman/view/ParallaxBackground.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stickman/view/ParallaxBackground.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LevelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LevelTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -142,12 +154,12 @@
     </option>
   </component>
   <component name="RunManager" selected="Gradle.Tests in 'Soft2201_Assignment2.test'">
-    <configuration name="GameEngineTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="IntegrationTest.beginningTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;GameEngineTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;IntegrationTest.beginningTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -162,12 +174,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GameEngineTest.basicTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LevelTest.basicTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;GameEngineTest.basicTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;LevelTest.basicTest&quot; --scan" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -182,12 +194,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GameEngineTest.moveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LevelTest.endTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;GameEngineTest.moveTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;LevelTest.endTest&quot; --stacktrace" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -202,12 +214,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="JsonTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LevelTest.finishTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;JsonTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;LevelTest.finishTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -227,7 +239,7 @@
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests *" />
+        <option name="scriptParameters" value="--tests * --stacktrace" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -245,10 +257,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.Tests in 'Soft2201_Assignment2.test'" />
-        <item itemvalue="Gradle.GameEngineTest" />
-        <item itemvalue="Gradle.GameEngineTest.moveTest" />
-        <item itemvalue="Gradle.GameEngineTest.basicTest" />
-        <item itemvalue="Gradle.JsonTest" />
+        <item itemvalue="Gradle.IntegrationTest.beginningTest" />
+        <item itemvalue="Gradle.LevelTest.basicTest" />
+        <item itemvalue="Gradle.LevelTest.endTest" />
+        <item itemvalue="Gradle.LevelTest.finishTest" />
       </list>
     </recent_temporary>
   </component>
@@ -280,7 +292,7 @@
       <workItem from="1570067446319" duration="14624000" />
       <workItem from="1570156156945" duration="14058000" />
       <workItem from="1570247195593" duration="28270000" />
-      <workItem from="1570336299723" duration="13962000" />
+      <workItem from="1570336299723" duration="18842000" />
     </task>
     <servers />
   </component>
@@ -322,11 +334,6 @@
           <line>5</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/JsonTest.java</url>
-          <line>8</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -335,7 +342,8 @@
     <SUITE FILE_PATH="coverage/Soft2201_Assignment2$EnemyTest.ic" NAME="EnemyTest Coverage Results" MODIFIED="1570345893963" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Soft2201_Assignment2$JsonTest.ic" NAME="JsonTest Coverage Results" MODIFIED="1570355522489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Soft2201_Assignment2$CloudTest.ic" NAME="CloudTest Coverage Results" MODIFIED="1570348416633" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/Soft2201_Assignment2$Tests_in__Soft2201_Assignment2_test_.ic" NAME="Tests in 'Soft2201_Assignment2.test' Coverage Results" MODIFIED="1570357876645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Soft2201_Assignment2$LevelTest_diedTest.ic" NAME="LevelTest.diedTest Coverage Results" MODIFIED="1570358807135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Soft2201_Assignment2$Tests_in__Soft2201_Assignment2_test_.ic" NAME="Tests in 'Soft2201_Assignment2.test' Coverage Results" MODIFIED="1570363545874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Soft2201_Assignment2$HeroTest_deadTest.ic" NAME="HeroTest.deadTest Coverage Results" MODIFIED="1570345131656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Soft2201_Assignment2$EnemyTest_moveTest.ic" NAME="EnemyTest.moveTest Coverage Results" MODIFIED="1570345614842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Soft2201_Assignment2$PlatformTest.ic" NAME="PlatformTest Coverage Results" MODIFIED="1570348669064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

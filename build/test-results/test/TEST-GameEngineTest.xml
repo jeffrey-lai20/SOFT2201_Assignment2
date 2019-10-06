@@ -1,29 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="GameEngineTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-10-06T10:46:59" hostname="DESKTOP-23IEG76" time="0.037">
+<testsuite name="GameEngineTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-10-06T12:05:48" hostname="DESKTOP-23IEG76" time="0.084">
   <properties/>
-  <testcase name="basicTest" classname="GameEngineTest" time="0.028"/>
+  <testcase name="basicTest" classname="GameEngineTest" time="0.056"/>
   <testcase name="moveTest" classname="GameEngineTest" time="0.001"/>
   <testcase name="heroDeadTest" classname="GameEngineTest" time="0.001"/>
-  <testcase name="gameOverTest" classname="GameEngineTest" time="0.004"/>
-  <testcase name="finishTest" classname="GameEngineTest" time="0.0"/>
-  <testcase name="restartLevelTest" classname="GameEngineTest" time="0.0"/>
+  <testcase name="gameOverTest" classname="GameEngineTest" time="0.002"/>
+  <testcase name="finishTest" classname="GameEngineTest" time="0.001"/>
+  <testcase name="restartLevelTest" classname="GameEngineTest" time="0.021"/>
   <testcase name="getLives" classname="GameEngineTest" time="0.001"/>
-  <system-out><![CDATA[here
-here
-here
-here
-here
-here
-here
-here
-here
-here
-here
-here
-here
-here
-here
-here
-]]></system-out>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

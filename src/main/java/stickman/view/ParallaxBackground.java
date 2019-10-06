@@ -8,6 +8,11 @@ import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
 import stickman.model.GameEngine;
 
+/** Implementes the interface BackgroundDrawer
+ * Draws the game's background with given parameters for width and height.
+ * Sets colours of light blue and green as a sky and floor, with the
+ * variable floor height to distinguish the two.
+ */
 public class ParallaxBackground implements BackgroundDrawer {
 
     private double width;

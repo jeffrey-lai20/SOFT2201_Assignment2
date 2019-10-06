@@ -22,7 +22,12 @@ public class JsonReader {
     private double[] enemy;
     private double finishLine;
 
-    public JsonReader(String jsonFile) throws FileNotFoundException {
+    /**
+     * Reads in a JSON file and initialising variables to the given input.
+     * stickmanSize comes in 4 sizes, tiny, normal, large, or giant.
+     * @param jsonFile
+     */
+    public JsonReader(String jsonFile) {
         JSONParser parser = new JSONParser();
         try {
             Object arrayObj = parser.parse(new InputStreamReader(new FileInputStream(jsonFile)));
@@ -54,7 +59,6 @@ public class JsonReader {
                 this.enemy[j] = (double) en.get("x");
             }
             this.finishLine = (double) stickman.get("finishLine");
-
         } catch (ParseException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -62,38 +66,78 @@ public class JsonReader {
         }
     }
 
+    /**
+     * Returns the stickman size read from the JSON file.
+     * @return
+     */
     public String getStickmanSize() {
         return stickmanSize;
     }
 
+    /**
+     * Returns the cloud velocity read from the JSON file.
+     * @return
+     */
     public double getCloudVelocity() {
         return cloudVelocity;
     }
 
+    /**
+     * Returns the hero's initial x-position read from the JSON file.
+     * @return
+     */
     public double getxPos() {
         return xPos;
     }
 
+    /**
+     * Returns the finish line's x-position read from the JSON file.
+     * @return
+     */
     public double getFinishLine() {
         return finishLine;
     }
 
+    /**
+     * Returns the level number read from the JSON file.
+     * @return
+     */
     public long getLevelNumber() {
         return levelNumber;
     }
 
+    /**
+     * Returns the number of platforms that will be given,
+     * read from the JSON file.
+     * @return
+     */
     public long getPlatformNumber() {
         return platformNumber;
     }
 
+    /**
+     * Returns an array of doubles, where even indices are x-positions,
+     * and odd indices are y-positions, read from the JSON file.
+     * @return
+     */
     public double[] getPlatform() {
         return platform;
     }
 
+    /**
+     * Returns the number of enemies that will be given,
+     * read from the JSON file.
+     * @return
+     */
     public long getEnemyNumber() {
         return enemyNumber;
     }
 
+    /**
+     * Returns an array of doubles that represent the
+     * x-positions of enemies, read from the JSON file.
+     * @return
+     */
     public double[] getEnemy() {
         return enemy;
     }
