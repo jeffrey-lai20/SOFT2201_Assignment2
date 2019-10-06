@@ -232,8 +232,6 @@ public class LevelImpl implements Level {
     }
 
     private void cloudMove() {
-//        cloud1.move(cloudVelocity);
-//        cloud2.move(cloudVelocity);
         for (int i = 0; i < numClouds; i++) {
             clouds[i].move(cloudVelocity);
         }

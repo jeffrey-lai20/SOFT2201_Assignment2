@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CloudTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-10-06T08:21:19" hostname="DESKTOP-23IEG76" time="0.004">
-  <properties/>
-  <testcase name="basicTest" classname="CloudTest" time="0.003"/>
-  <testcase name="imagePathTest" classname="CloudTest" time="0.0"/>
-  <testcase name="moveTest" classname="CloudTest" time="0.0"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

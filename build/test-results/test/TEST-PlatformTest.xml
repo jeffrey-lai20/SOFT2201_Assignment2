@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="PlatformTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-10-06T08:21:19" hostname="DESKTOP-23IEG76" time="0.001">
-  <properties/>
-  <testcase name="basicTest" classname="PlatformTest" time="0.001"/>
-  <testcase name="imagePathTest" classname="PlatformTest" time="0.0"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

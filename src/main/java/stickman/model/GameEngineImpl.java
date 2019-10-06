@@ -44,8 +44,6 @@ public class GameEngineImpl implements GameEngine {
         this.finishLine = reader.getFinishLine();
         this.lives = 3;
 
-
-
         if (xPos < 0 || cloudVelocity < 0) {
             System.err.println("Unexpected negative value from JSON file found.");
             System.exit(1);
@@ -87,7 +85,7 @@ public class GameEngineImpl implements GameEngine {
 
     @Override
     public void tick() {
-    this.currentLevel.tick();
+        this.currentLevel.tick();
     }
 
     public boolean finish() {
